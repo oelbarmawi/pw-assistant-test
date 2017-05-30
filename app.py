@@ -24,11 +24,21 @@ def webhook():
 	print("Request:")
 	print(json.dumps(req, indent=4))
 
-	# Dictionary Object
-	res = process_request(req)
+	# Recent Changes (start)
 
-	# Dictionary converted to json
-	res = json.dumps(rest, indent=4)
+	# # Dictionary Object
+	# res = process_request(req)
+
+	# # Dictionary converted to json
+	# res = json.dumps(rest, indent=4)
+	if True:
+		res = {}
+		res['speech'] = 'this is working'
+		res['displayText'] = 'This is working.'
+		res['source'] = 'pw-assistant-test'
+		return res
+	# Recent Changes (end)
+	
 
 	r = make_response(res)
 	r.headers['Content-Type'] = 'application/json'
@@ -46,7 +56,6 @@ def process_request(req):
 	return {
 		"speech": speech,
 		"displayText": speech,
-		#Change this
 		"source": "pw-assistant-test" 
 	}
 	## Converting website url to json usable json.
