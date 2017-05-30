@@ -46,7 +46,7 @@ def processRequest(req):
     # oppType = result.get("result").get("parameters").get("opp-type")
     # result = urlopen(yql_url).read()
     # data = json.loads(result)
-    speech = "This is working."
+    speech = "This is working. Test 2"
     return {
         "speech": speech,
         "displayText": speech,
