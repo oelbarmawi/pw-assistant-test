@@ -43,10 +43,10 @@ def processRequest(req):
     # if yql_query is None:
         # return {}
     # yql_url = baseurl + urlencode({'q': yql_query}) + "&format=json"
-    oppType = result.get("result").get("parameters").get("opp-type")
+    # oppType = result.get("result").get("parameters").get("opp-type")
     # result = urlopen(yql_url).read()
     # data = json.loads(result)
-    speech = "Opportunity is: " + oppType + " -- This is working."
+    speech = "This is working."
     return {
         "speech": speech,
         "displayText": speech,
