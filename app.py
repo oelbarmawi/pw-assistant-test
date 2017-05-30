@@ -26,7 +26,7 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
 
-    res = process_request(req)
+    res = processRequest(req)
 
     res = json.dumps(res, indent=4)
     # print(res)
@@ -35,7 +35,7 @@ def webhook():
     return r
 
 
-def process_request(req):
+def processRequest(req):
     if req.get("result").get("action") != "TodaysOpportunities.Direct":
         return {}
 
