@@ -1,25 +1,16 @@
-# pw-assistant-test
+# Api.ai - sample webhook implementation in Python
 
-Test for Heroku Deployment and API.AI web fulfillments
+This is a really simple webhook implementation that gets Api.ai classification JSON (i.e. a JSON output of Api.ai /query endpoint) and returns a fulfillment response.
 
-## Running Locally
+More info about Api.ai webhooks could be found here:
+[Api.ai Webhook](https://docs.api.ai/docs/webhook)
 
-```sh
-$ git clone git@github.com:heroku/pw-assistant-test.git # or clone your own fork
-$ cd pw-assistant-test
-$ npm install
-$ npm start
-```
+# Deploy to:
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+# What does the service do?
+It's a weather information fulfillment service that uses [Yahoo! Weather API](https://developer.yahoo.com/weather/).
+The services takes the `geo-city` parameter from the action, performs geolocation for the city and requests weather information from Yahoo! Weather public API. 
 
-## Deploying to Heroku
+The service packs the result in the Api.ai webhook-compatible response JSON and returns it to Api.ai.
 
-```
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-or
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)# pw-assistant-test
