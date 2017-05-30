@@ -40,7 +40,7 @@ def processRequest(req):
         return {}
     oppType = req.get("result").get("parameters").get("opp-type")
 
-    speech = "This is working. Opportunity type: " + oppType
+    speech = "The following people qualify for " + oppType + ": John Smith, Joe Schmo, and Donald Duke."
     return {
         "speech": speech,
         "displayText": speech,
