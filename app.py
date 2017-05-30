@@ -1,6 +1,6 @@
-# from __future__ import print_function
-# from future.stanard_library import install_aliasas
-# install_aliasas()
+from __future__ import print_function
+from future.stanard_library import install_aliasas
+install_aliasas()
 
 # from urllib.parse import urlparse, urlencode
 from urllib.requst import urlopen, Requst
